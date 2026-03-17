@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Builder AI — Turn Your Idea Into a Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Landing Section -->
+    <section id="landing" class="section active">
+      <header class="header">
+        <div class="logo">
+          <span class="logo-icon">◆</span>
+          <span class="logo-text">StartupBuilder</span>
+        </div>
+      </header>
+
+      <main class="hero">
+        <h1 class="hero-title">
+          <span class="title-line">Turn your idea into</span>
+          <span class="title-line title-accent">a structured plan</span>
+        </h1>
+        <p class="hero-subtitle">
+          Enter your startup concept and get an actionable roadmap in seconds.
+        </p>
+
+        <form id="idea-form" class="idea-form">
+          <div class="input-wrapper">
+            <textarea 
+              id="idea-input" 
+              placeholder="e.g. AI-powered meal planning app for busy professionals..."
+              rows="3"
+              required
+            ></textarea>
+            <span class="input-focus-line"></span>
+          </div>
+          <button type="submit" class="btn-generate" id="generate-btn">
+            <span class="btn-text">Generate Plan</span>
+            <span class="btn-loader"></span>
+          </button>
+        </form>
+      </main>
+
+      <footer class="landing-footer">
+        <span>No signup required</span>
+        <span class="dot">•</span>
+        <span>Free to use</span>
+      </footer>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="section">
+      <header class="header header-compact">
+        <button class="btn-back" id="back-btn" aria-label="Back">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Back
+        </button>
+        <div class="logo logo-small">
+          <span class="logo-icon">◆</span>
+          <span class="logo-text">StartupBuilder</span>
+        </div>
+      </header>
+
+      <main class="results-main">
+        <div class="results-header">
+          <h2 class="results-title">Your Startup Plan</h2>
+          <p class="results-idea" id="results-idea"></p>
+        </div>
+
+        <div class="plan-cards" id="plan-cards">
+          <!-- Populated by JS -->
+        </div>
+      </main>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
